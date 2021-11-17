@@ -1,4 +1,10 @@
 {
+  "name": "reddit-nextjs",
+  "version": "0.0.1",
+  "author": {
+    "name": "Mike Paz",
+    "email": "mikelupaz@gmail.com"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -6,8 +12,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.1.1",
     "next": "latest",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "swr": "^1.0.1"
   }
 }
