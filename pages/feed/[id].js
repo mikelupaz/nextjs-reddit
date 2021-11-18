@@ -1,30 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import Container from "@mui/material/Container";
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
-import Modal from "../../src/component/Modal";
-
-import { getHotPost } from "../../core/feed";
+import { getHotPost } from "core/feed";
 
 export default () => {
   const { hotPost, isLoading } = getHotPost();
-  const [modalProps, setModalProps] = useState({
-    open: false,
-    title: "",
-    description: "",
-  });
 
   if (isLoading) return <h5>fetching data</h5>;
 
-  const handleClickPost = ({ title, selftext_html, ...rest }) => {
-    setModalProps({
-      open: true,
-      title: title,
-      description: selftext_html || "",
-    });
-  };
+  const handleClickPost = ({ title, selftext_html, ...rest }) => {};
   if (!hotPost.data) return <h5>No Post Available</h5>;
   return (
     <Container maxWidth="md">
@@ -60,14 +47,6 @@ export default () => {
             </Box>
           );
         })}
-      <Modal
-        open={modalProps.open}
-        handleClose={() =>
-          setModalProps({ open: false, title: "", description: "" })
-        }
-        title={modalProps.title}
-        description={modalProps.description}
-      />
       ;
     </Container>
   );

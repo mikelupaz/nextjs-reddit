@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Container from "@mui/material/Container";
-import { useSWRConfig } from "swr";
-
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
-import { searchKeyword, searchUpdater } from "../core/search";
+import { searchKeyword, searchUpdater } from "core/search";
 
 import Link from "next/link";
 
-export default function Index() {
+export default () => {
   const { searchResult, isLoading, mutateSearch } = searchKeyword();
 
   const handleRedditSearch = (value) => {
@@ -56,4 +53,4 @@ export default function Index() {
       </Box>
     </Container>
   );
-}
+};

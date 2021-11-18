@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": {
     "name": "Mike Paz",
-    "email": "mikelupaz@gmail.com"
+    "url": "https://github.com/mikelupaz"
   },
   "private": true,
   "scripts": {
@@ -14,6 +14,7 @@
   "dependencies": {
     "@emotion/react": "^11.6.0",
     "@emotion/styled": "^11.6.0",
+    "@jjordy/swr-devtools": "^2.2.0",
     "@mui/material": "^5.1.1",
     "axios": "^0.24.0",
     "next": "latest",

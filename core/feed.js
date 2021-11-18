@@ -1,10 +1,6 @@
 import useSWR from "swr";
 import { useRouter } from "next/router";
-import axios from "axios";
-
-const api = axios.create({
-  baseURL: process.env.redditUrl,
-});
+import { api } from "./api";
 
 const axiosFetcher = (url) => {
   return api

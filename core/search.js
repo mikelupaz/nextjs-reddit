@@ -1,9 +1,5 @@
-import axios from "axios";
 import useSWR from "swr";
-
-const api = axios.create({
-  baseURL: process.env.redditUrl,
-});
+import { api } from "./api";
 
 const axiosFetcher = (url, serializedParams) => {
   const params = JSON.parse(serializedParams);
